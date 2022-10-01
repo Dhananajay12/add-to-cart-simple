@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+
+body {
+  margin: 0;
+font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+font-family: 'Poppins', sans-serif;
+  
+}
+.size2{
+  margin-top: 1.1rem;
+  border-radius: 10px;
+width: 70%;
+padding: 1%;
+
+border: 1px solid rgb(172, 166, 166);
+}
+.btn{
+  border: 1px solid grey;
+
+  
+}
+.subtotal2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.center{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+.con1{
+  display: flex;
+  justify-content: space-between;
+}
+.button3{
+  border-radius: 10px;
+  border: 1px solid mediumorchid;
+  background-color: mediumorchid;
+  padding:10px;
+  color: white;
+  text-decoration: none !important;
+
+}
+.button3:hover{
+   color: mediumorchid;
+   background-color: white;
+   border: 1px solid mediumorchid;
+}
+
+.total{
+  border-radius: 10px;
+  margin-top: 1rem;
+  padding: 1%;
+  width: 30%;
+  border: 1px solid rgb(173, 169, 169);
+}
+
+@media (max-width:1000px ){
+.total {
+  width: 100%;
+  padding: 20px;
+}
+.subtotal2 {
+    text-align: center !important;
+    justify-content: center;
+}
+.cart {
+  display: inline !important;
+
+}
+.size2{
+  width: 100%;
+  border: 1px solid rgb(172, 166, 166);
+}
+
+}
+
+.thanks-you{
+  justify-content: center;
+  text-align: center;
+  margin-top: 10rem;
+}
+.button5{
+  color: white;
+  background-color: green;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+.button5:hover{
+  color:white;
+  background-color:rgb(117, 184, 17);
+}
+
+
+
+
+.button2{
+  width: 100%;
+  background-color:mediumorchid;
+  border-radius: 45px;
+  padding: 4%;
+  font-size: 20px;
+  
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  color: white;
+}
+.button2:hover{
+  background-color:rgb(137, 43, 156);
+  color:white;
+}
+
+
+.subtotal{
+  display: flex;
+  justify-content: space-between;
+}
+.cart{
+  display: flex;
+}
+
+
+.size{
+  height: 80px;
+  width: 80px;
+}
+
+.button{
+  border:none;
+  text-align: center;
+}
+
+.button1 {
+  border: 1px solid grey;
+  text-align: center;
+}
