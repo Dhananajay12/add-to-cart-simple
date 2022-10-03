@@ -83,11 +83,20 @@ border: 1px solid rgb(172, 166, 166);
 }
 
 }
+.conter-div-color{
+  margin: auto;
+    width: 40rem;
+    border: 3px solid #73AD21;
+    padding: 20px;
+    text-align: center
+}
 
 .thanks-you{
-  justify-content: center;
-  text-align: center;
+ 
+margin: auto;
+ 
   margin-top: 10rem;
+
 }
 .button5{
   color: white;

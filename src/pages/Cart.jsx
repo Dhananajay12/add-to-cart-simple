@@ -139,9 +139,9 @@ const Cart = () => {
         <br></br>
         <br></br>
         <center>
-          <a href="/thanks" className="button2 ">
+          <Link to="/thanks" className="button2">
             PROCEED TO CHECKOUT
-          </a>
+          </Link>
         </center>
         <br></br>
       </div>

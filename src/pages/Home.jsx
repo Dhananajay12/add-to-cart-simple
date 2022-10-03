@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { add } from "../store/cartSlice";
+import { add, decrease, increase } from "../store/cartSlice";
 import { BsArrowClockwise } from "react-icons/bs";
 import Dropdown from "react-bootstrap/Dropdown";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -11,7 +11,8 @@ import SearchFilter from "react-filter-search";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { cartItem } = useSelector((state) => state.cart);
+  const { cartItem, quantity } = useSelector((state) => state.cart);
+  // const [qun, setQun] = useState(1);
   const [data, setData] = useState([]);
   const [searchInput, setSearchInput] = useState("");
   const [filter, setFilter] = useState([]);
@@ -32,8 +33,14 @@ const Home = () => {
     dispatch(add(product));
   };
 
+  const handleDec = (product) => {
+    dispatch(decrease(product));
+    window.location.reload();
+  };
+
   // const handleDecrease = (product) => {
-  //   dispatch(decrease(product));
+  //  setCount(count - 1);
+
   // };
 
   // const incrementCount = () => {
@@ -131,7 +138,19 @@ const Home = () => {
                   </div>
                   <div className="col-md-2">
                     <div className="center">
-                      <h5>1</h5>
+                      <button
+                        className="button3 mx-1"
+                        onClick={() => handleAdd(product)}
+                      >
+                        {" "}
+                        +{" "}
+                      </button>
+                      <button
+                        className="button3 mx-1"
+                        onClick={() => handleDec(product)}
+                      >
+                        -
+                      </button>
                     </div>
                   </div>
                   <div className="col-md-2">
