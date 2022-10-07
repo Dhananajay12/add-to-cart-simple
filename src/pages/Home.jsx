@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { add, decrease, increase } from "../store/cartSlice";
+import { add, decrease } from "../store/cartSlice";
 import { BsArrowClockwise } from "react-icons/bs";
 import Dropdown from "react-bootstrap/Dropdown";
 import { AiOutlineShoppingCart } from "react-icons/ai";
@@ -11,7 +11,7 @@ import SearchFilter from "react-filter-search";
 
 const Home = () => {
   const dispatch = useDispatch();
-  const { cartItem, quantity } = useSelector((state) => state.cart);
+  const { cartItem } = useSelector((state) => state.cart);
   // const [qun, setQun] = useState(1);
   const [data, setData] = useState([]);
   const [searchInput, setSearchInput] = useState("");
@@ -35,7 +35,6 @@ const Home = () => {
 
   const handleDec = (product) => {
     dispatch(decrease(product));
-    window.location.reload();
   };
 
   // const handleDecrease = (product) => {
@@ -155,7 +154,7 @@ const Home = () => {
                   </div>
                   <div className="col-md-2">
                     <button
-                      className="button3 mx-1"
+                      className="button3 mx-1 mt-1"
                       onClick={() => handleAdd(product)}
                     >
                       <AiOutlineShoppingCart className="h3 m-1" />
